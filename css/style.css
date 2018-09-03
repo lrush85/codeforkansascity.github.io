@@ -30,16 +30,23 @@ table h3 {
   margin-right: 15px!important;
 }
 
+.caret-right {
+  border-left: 4px solid @black;
+  border-right: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  height: 500px;
+  height: 340px;
   background-image: url(../images/header-bg/5.jpg);
   background-size: cover;
   background-position: center bottom;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #fff;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -49,14 +56,23 @@ table h3 {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  height: 350px;
 }
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;
+  height: 350px;
+}
+
+
+#codeForKC {
+  text-shadow: 2.1px 3px 40px rgb(0,0,0);
+}
+
+#codeForKCPara {
+  text-shadow: 1.5px 1.5px 10px rgb(0,0,0);
 }
 
 
@@ -84,8 +100,8 @@ table h3 {
 }
 
 .jumbotron {
-  margin-top: 50px;
-  background: rgba(0,0,0,0.44)
+  margin-top: 10px;
+  background: rgba(0,0,0,0.01)
 }
 
 
@@ -218,6 +234,11 @@ table h3 {
   border-top: 1px solid #e5e5e5;
 }
 
+#footerBar {
+  margin-top: 10px;
+}
+
+
 /* Customize container */
 .container-narrow > hr {
   margin: 30px 0;
@@ -226,7 +247,7 @@ table h3 {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 40px solid #e5e5e5;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -332,7 +353,8 @@ h2.first {
 
 .kcmarketing div {
   text-align: center;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 p.callout {
@@ -346,6 +368,9 @@ h1.index {
 /* definition list for project list */
 
 
+#projects {
+  margin-top: 50px;
+}
 
 p.project-list {
   font-size: 21px;
@@ -469,4 +494,6 @@ tr td:first-child {
   width: 10em;
   align-content: flex-end;
 }
+
+
 

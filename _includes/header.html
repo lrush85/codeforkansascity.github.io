@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="utf-8">
-    <title>{{page.title}}</title>
-    <meta name="description"
+
+        <meta charset="utf-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description"
           content="Kansas City locals helping Kansas City government and local organizations open their data and create meaningful tools"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="favicon.ico"/>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link href="{{site.baseurl}}/css/style.css" rel="stylesheet"/>
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <title>{{ page.title }}</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="shortcut icon" href="./images/CodeForKC_Logo-01.png"/>
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+        <link href="{{site.baseurl}}/css/style2.css" rel="stylesheet"/>
+    
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+    
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    
+        <!-- Owl Carousel -->
+        <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+        <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+    
+        <!-- Magnific Popup -->
+        <link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+    
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="css/style2.css" />
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
     {% if page.custom_css %}
     {% for stylesheet in page.custom_css %}
@@ -22,102 +54,14 @@
     {% endif %}
 
 </head>
-<body data-spy="scroll" data-target=".navbar">
 
-{% include nav-bar.html %}
+<!-- {% include nav-bar.html %}
 
 {% if page.is_front %}
-<!-- Alert for At Meetup Checkin Form
-         <div class="alert alert-success visible-xs" role="alert">
-  <span class="glyphicon glyphicon-ok-sign pull-left" style="font-size:24pt;"></span>
-  If you're currently at the Meetup, <a href="https://docs.google.com/forms/d/1kcHc3gZQXVHkLg2mxXfjEiPeyVZWf6__HrbAqftZuFE/viewform">why not check in?</a>
-</div> -->
-
-<!-- Carousel - only using one at the moment
-================================================== -->
-<div id="banner" class="carousel slide" data-ride="carousel" data-interval="20000">
-    <!-- Indicators -->
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#banner" data-slide-to="0" class="active"></li>
-      <li data-target="#banner" data-slide-to="1"></li>
-    </ol> -->
-
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="container">
-                <div class="jumbotron col-md-12">
-                    <h1>We are Code for <br/> Kansas City</h1>
-                    <div class="row">
-                        <p class="lead col-md-10 col-md-offset-1">
-                            Join developers, designers, data geeks, policy buffs and idea makers working with local
-                            government to make Kansas City a better place through civic hacking and open data.
-                        </p>
-                    </div>
-                    <a class="btn btn-success btn-lg" href="#callouts">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /.carousel -->
-        <div class="col-lg-12">
-        </div>
-        
-<div class="container kcmarketing">
-    <div class="row" id="callouts">
-        <div class="col-md-4">
-            <img src="{{ site.baseurl }}/images/brigade.150.png">
-
-            <h1>Join the Brigade</h1>
-
-            <p class="lead callout">We'd love to have you at our Meetups.<br></p>
-            <a class="btn btn-success btn-lg" href="http://www.meetup.com/kcbrigade" target="_blank">MEET US</a>
-        </div>
-        <div class="col-md-4">
-            <img src="{{ site.baseurl }}/images/noun_91769.150.png">
-
-            <h1>Find a Project</h1>
-
-            <p class="lead callout">We’re committing code for good.<br></p>
-            <a class="btn btn-success btn-lg" href="/#project-list">VIEW MORE</a>
-        </div>
-        <div class="col-md-4">
-            <img src="{{ site.baseurl }}/images/noun_86192.150.png">
-
-            <h1>Submit an Idea</h1>
-
-            <p class="lead callout">Got an idea to make government run better?</p>
-            <a class="btn btn-success btn-lg" href="http://goo.gl/forms/dXz7QfBBfl" target="_blank">TELL US</a>
-        </div>
-    </div>
-</div>
 
 {% elsif page.is_nocd_2015 %}
-
-
-<br>
 <!-- /full-width-image-1 -->
+<!-- {% else %}
 
-{% else %}
-<!-- FEATURED IMAGE AND INTRO -->
-<div class="title-parent">
+{% endif %} --> 
 
-    <div class="wide" {% if page.image %}
-         style="background: #000000 url('{{ site.baseurl }}/images/projects/{{ page.image }}') no-repeat top center; background-size: cover;"
-         {% else %} style="background: #cf1b41; color: #FFF;" {% endif %}>
-        <div class="container" id="maincontent" tabindex="-1">
-            <div class="row">
-                <div class="title col-md-7">
-                    <h1>{{ page.title }}</h1>
-
-                    <p class="lead">{{page.excerpt}}</p>
-                </div>
-            </div>
-        </div>
-        <!-- /full-width-image-1 -->
-    </div>
-    <!-- /title-parent -->
-
-    {% endif %}
-
-    <div class="container">

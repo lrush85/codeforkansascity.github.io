@@ -7,214 +7,174 @@ custom_js:
 - showdown
 ---
 <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script> AOS.init();</script>
 
-<style>
-    .card {
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    }
+<!-- About -->
+<div id="about" class="section md-padding">
 
-    .card {
-        margin-top: 10px;
-        box-sizing: border-box;
-        border-radius: 2px;
-        background-clip: padding-box;
-        background-color: #4cae4c;
-        color: #000;
-    }
+        <!-- Container -->
+        <div class="container">
 
-    .card span.card-title {
-        color: #000;
-        font-size: 18px;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
+            <!-- Row -->
+            <div class="row">
 
-    .card .card-image {
-        position: relative;
-        overflow: hidden;
-    }
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Who We Are</h2>
+                    <p>We’re Kansas City’s chapter of the Code for America Brigade network, a group of civic-minded geeks who volunteer our talents to projects that improve how our local governments and community organizations use the web. We strive for principles of open data and technology advocacy for civic good and are supported by our host organization, <a target="_blank" href="http://www.kcdigitaldrive.org/">KC Digital Drive</a>. The Brigade is about action, so join us at a Hack Night where we’ll commit code to make a difference in our city!</p>
+                </div>
+                <!-- /Section header -->
 
-    .card .card-image img {
-        border-radius: 2px 2px 0 0;
-        background-clip: padding-box;
-        position: relative;
-        z-index: -1;
-    }
+                <!-- about -->
+                <div class="col-md-4">
+                    <div class="about">
+                        <i class="fa fa-ship"></i>
+                        <h3>Join the Brigade</h3>
+                        <p>Join a group of advocates creating and building technology for our community.</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+                <!-- /about -->
 
-    .card .card-image span.card-title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding: 16px;
-    }
+                <!-- about -->
+                <div class="col-md-4">
+                    <div class="about">
+                        <i class="fa fa-code"></i>
+                        <h3>Find a Project</h3>
+                        <p>Want to contribute to a project? Join us and help the community.</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+                <!-- /about -->
 
-    .card .card-header {
-        padding: 16px;
-        border-radius: 0 0 2px 2px;
-        background-clip: padding-box;
-        box-sizing: border-box;
-        position: relative;
-        bottom: 0;
-        left: 0;
-    }
+                <!-- about -->
+                <div class="col-md-4">
+                    <div class="about">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h3>Submit an Idea</h3>
+                        <p>Got an idea to make government run better?</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+                <!-- /about -->
 
-    .card .card-content {
-        padding: 0 16px 16px 16px;
-        border-radius: 0 0 2px 2px;
-        background-clip: padding-box;
-        box-sizing: border-box;
-        backgroun-color: #000;
-        color: #111;
-        padding-top: 4px;
-        min-height: 100px;
-        font-size: 21px;
-        font-weight: 300;
-        line-height: 1.4;
-    }
-
-    .card .card-content p {
-        margin: 0;
-        color: inherit;
-    }
-
-    .card .card-content span.card-title {
-        line-height: 48px;
-    }
-
-    .card .card-action {
-        border-top: 1px solid rgba(160, 160, 160, 0.2);
-        padding: 16px;
-    }
-
-    .card .card-action p {
-        color: #ffab40;
-        margin-right: 16px;
-        transition: color 0.3s ease;
-        text-transform: uppercase;
-    }
-    .card .card-action a {
-        color: #ffab40;
-        margin-right: 16px;
-        transition: color 0.3s ease;
-        text-transform: uppercase;
-    }
-
-    .card .card-action a:hover {
-        color: #ffd8a6;
-        text-decoration: none;
-        background-color: #fff;
-    }
-
-    /* http://stackoverflow.com/questions/19196082/bootstrap-how-to-stack-divs-of-different-heights
-       and refered to http://www.bootply.com/85737
-    */
-
-    .row2 {
-        -moz-column-width: 28em;
-        -webkit-column-width: 28em;
-        -moz-column-gap: 1em;
-        -webkit-column-gap: 1em;
-
-    }
-
-    .menu-category {
-        display: inline-block;
-        margin:  0.25rem;
-        padding:  1rem;
-        width:  100%;
-    }
-
-</style>
-
-<div class="row">
-    <div class="col-lg-12">
-    </div>
-    <div class="col-md-12">
-
-        <h1>Who We Are</h1>
-
-        <p class="lead">We’re Kansas City’s chapter of the Code for America Brigade network, a group of civic-minded
-            geeks who volunteer our talents to projects that improve how our local governments and community
-            organizations use the web. We strive for principles of open data and technology advocacy for civic good and
-            are supported by our host organization, <a target="_blank" href="http://www.kcdigitaldrive.org/">KC Digital
-                Drive</a>. The
-            Brigade is about action, so join us at a Hack
-            Night where we’ll commit code to make a difference in our city!</p>
-        <!--
-                <h1>HackKC Midpoint Roundup</h1>
-
-                <p>Join us August 31, from 6-8pm upstairs in the big room at the Sprint Accelerator for pizza and geeking out as
-                    we hear progress reports from teams who participated in HackKC: The National Day of Civic Hacking hackathon
-                    this past June.</p>
-
-                <p>We'll also welcome people from the community with ideas for technology projects to come pitch their
-                    ideas.</p>
-
-
-                            <h2>Meet the Teams</h2>
-        <p class="lead">Since the HackKC hackathon in June teams have been working hard at our weekly Hack Night to
-            develop apps
-            that citizens of Kansas City will use to enhance the way they interact with their local government and
-            communities around them. These teams include:</p>
-        -->
-        <a name="project-list"></a>
-
-
-        <div id="projects" name="projects" class="menu row2">
+            </div>
+            <!-- /Row -->
 
         </div>
-
-        <br>
-
-        <h1>Delivered Projects</h1>
-
-        <h3><a href="http://communitykc.org" target="_blank">CommunityKC Mapping Tool</a></h3>
-
-        <p style="padding-bottom: 1em; margin-bottom: 1em;"><a href="http://communitykc.org" target="_blank"><img name="groups" class="featurette-image pull-left"
-                                                                 src="images/community-kc-2.gif"
-                                                                 alt="Screen shot of CommunityKC.org"/></a></p>
-
-        <br style="clear: both">
-        <br style="clear: both">
-
-        <h3 style="padding-top: 1em; margin-top: 1em;"><a href="http://igotmineinkc.org/" target="_blank">I Got Mine in KC</a></h3>
-
-        <p><a href="http://igotmineinkc.org/" target="_blank"><img name="groups" class="featurette-image pull-left"
-                                                                 src="images/i-got-mine.gif"
-                                                                 alt="Screen shot of I Got Mine in KC"/></a></p>
-
-
-        <br style="clear: both">
-        <h1 class="index">Hack With Us</h1>
-
-        <p class="lead">We meet every week on Monday night to hack, socialize and learn. Join us on Meetup for the
-            latest info. Upcoming meetings:</p>
-
-        <ul class="lead">
-<li><a target="_blank" href="https://www.meetup.com/KCBrigade/events/dbjpppyxjbxb/">RSVP</a> - Jun. 18 - Hack Night & Learn Night</li>
-<li><a target="_blank" href="https://www.meetup.com/KCBrigade/events/dbjpppyxjbhc/">RSVP</a> - Jun. 25 - Hack Night</li>            
-<li><a target="_blank" href="https://www.meetup.com/KCBrigade/events/dbjpppyxkbdb/">RSVP</a> - Jul. 2 - Hack Night, Pitch Night & Pizza</li>
-<li><a target="_blank" href="https://www.meetup.com/KCBrigade/events/dbjpppyxkbmb/">RSVP</a> - Jul. 9 - Hack Night</li>
-<li><a target="_blank" href="https://www.meetup.com/KCBrigade/events/dbjpppyxkbvb/">RSVP</a> - Jul. 16 - Hack Night</li>
-        </ul>
-
-        <h1 class="index" style="text-align: center">Thanks to our Sponsors</h1>
-
-        <p style="text-align: center"><img name="groups" class="featurette-image" src="images/google-fiber.png"
-                                           alt="Google Fiber our Sponsor"/></p>
-
-        <br style="clear: both">
-
-        <p class="lead">Interested in becoming a sponsor? Contact Aaron at KC Digital Drive:
-            adeacon@kcdigitaldrive.org</p>
-
-        <h1 class="index">Stay in Touch</h1>
-
-        <p class="lead">Got a question? Contact Brigade captain Paul Barham at captain@codeforkc.org. Sign up for
-            our
-            <a target="_blank" href="http://eepurl.com/7gbQP ">mailing list</a> to receive updates.
-        </p>
-
+        <!-- /Container -->
 
     </div>
+    <!-- /About -->
+
+<div class="row" style="text-align: center">
+    <div class="col-sm-6">
+        <h2 class="index">Stay in Touch</h2>
+        <p class="lead">Got a question? Contact Brigade captain Paul Barham at captain@codeforkc.org. Sign up for
+        our
+            <a target="_blank" href="http://eepurl.com/7gbQP ">mailing list</a> to receive updates.
+        </p>
+    </div>
+    <div class="col-sm-6">
+        <h2>Become a Sponsor</h2>
+        <p class="lead" style="text-align: center;">Interested in becoming a sponsor? Contact Aaron at KC Digital Drive: adeacon@kcdigitaldrive.org</p>
+    </div>
 </div>
+
+
+<!-- Projects -->
+<div id="projects" class="section md-padding bg-grey">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Featured Projects</h2>
+				</div>
+                <!-- /Section header -->
+                
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+	</div>
+	<!-- /Projects -->
+</div>
+
+
+    <br><br><br>
+
+    <!--Container-->
+<div class="container md-padding delivered-projects">
+
+    <!--Row-->
+    <div class="row">
+
+        <!-- Section header -->
+        <div class="section-header text-center delivered-projects">
+            <h2 class="title">Delivered Projects</h2>
+        </div>
+        <!-- /Section header-->
+
+        <div class="row">
+            <div class="col-md-4 col-xs-6">
+                <h3><a href="http://communitykc.org" target="_blank">CommunityKC Mapping Tool</a></h3>
+                    <p style="padding-bottom: 1.5em; margin-bottom: 1.5em;"><a href="http://communitykc.org" target="_blank"><img name="groups" class="featurette-image thumbnail" src="images/community-kc-2.gif" alt="Screen shot of CommunityKC.org" style="width: auto; height: 200px;" /></a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-xs-6">
+                <h3><a href="http://igotmineinkc.org/" target="_blank">I Got Mine in KC</a></h3>
+                    <p><a href="http://igotmineinkc.org/" target="_blank"><img name="groups" class="featurette-image thumbnail" src="images/i-got-mine.gif" alt="Screen shot of I Got Mine in KC" style="width: auto; height: 200px;"/></a></p>
+            </div>
+                <p class="i-got-mine-kc">Every year, many residents of Kansas City forego services provided by the City of Kansas City, MO Health Department (KCHD). The City of Kansas City, MO Health Department has a number of programs to reduce the risk of STIs spreading among the city’s youth–and citizens of all ages. Resources the city offers include free condom distribution, HIV tests, an interactive sexual health assessment, and sexual health seminars and/or testing opportunities held in the community at large.</p>
+        </div>
+        
+    </div>
+    <!-- /Row-->
+</div>
+    <!-- /Container-->
+
+    <hr>
+
+    <div id="sponsor"></div>
+        <h1 class="index" style="text-align: center">Thanks to our Sponsors</h1>
+
+        <p style="text-align: center"><img name="groups" class="featurette-image" src="images/google-fiber.png" alt="Google Fiber our Sponsor"/></p>
+
+        <br style="clear: both">
+
+    </div>
+
+
+
+<!-- Back to top -->
+<div id="back-to-top"></div>
+<!-- /Back to top -->
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- /Preloader -->
+
+<!-- jQuery Plugins -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  

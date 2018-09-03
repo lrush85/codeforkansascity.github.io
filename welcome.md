@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: welcome
 local-chapter-name: Code for Kansas City
 location: Kansas City
 title: Welcome/Resources

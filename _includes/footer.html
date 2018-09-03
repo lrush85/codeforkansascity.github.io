@@ -1,15 +1,59 @@
- 	<!-- FOOTER -->
+	<!-- Footer -->
+	<footer id="footer" class="sm-padding bg-dark">
+
+      <!-- Container -->
+      <div class="container">
+  
+        <!-- Row -->
+        <div class="row">
+  
+          <div class="col-md-12">
+  
+            <!-- footer logo -->
+            <div class="footer-logo">
+              <a href="index.html"><img src="./images/CodeForKC_Logo-01.png" alt="logo"></a>
+            </div>
+            <!-- /footer logo -->
+  
+            <!-- footer follow -->
+            <ul class="footer-follow">
+              <li><a href="https://github.com/codeforkansascity"><i class="fa fa-github"></i></a></li>
+              <li><a href="http://meetup.com/kcbrigade"><i class="fa fa-users"></i></a></li>
+              <li><a href="https://twitter.com/codeforkc"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://eepurl.com/7gbQP"><i class="fa fa-envelope"></i></a></li>
+              <li><a href="https://codeforkc.slack.com"><i class="fa fa-slack"></i></a></li>
+            </ul>
+            <!-- /footer follow -->
+  
+          </div>
+  
+        </div>
+        <!-- /Row -->
+  
+      </div>
+      <!-- /Container -->
+  
+    </footer>
+    <!-- /Footer -->
+
+<!-- FOOTER -->
 {% if page.is_nocd_2015 %}
   <div class="footer">
     <p class="pull-right">HACK KC presenters and participants are held to this <a href="{{ site.baseurl }}/hackkc-code-of-conduct">anti-harassment policy.</a></p>
   </div>
 {% else %}
-  <div class="footer">
-    <p class="pull-right">Code for Kansas City | <a href=""><i class="icon-github"></i> Pull requests welcome!</a></p>
-  </div>
+<!-- footer copyright -->
+<div class="footer-copyright">
+  <p style="padding-top: 10px;" class="pull-left">Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+
+  <p style="padding-top: 10px;" class="pull-right">Code for Kansas City | <a href="#"><i class="fa fa-github"></i> Pull requests welcome!</a></p>
+</div>
+
+  <!-- /footer copyright -->
+ 
+
 {% endif %}
 
-</div><!-- /.container -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -19,4 +63,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
 {% for script in page.scripts %}
   <script src="{{ site.baseurl }}/js/{{script}}"></script>
+
 {% endfor %}

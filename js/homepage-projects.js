@@ -42,28 +42,16 @@ Tabletop.init({                                             // Requires js/table
         for (var i in worksheetRows) {
             var worksheetRow = worksheetRows[i];
 
-            if ( worksheetRow['HomePage'] != 'Y' ) continue;
+            if ( worksheetRow['HomePage'] != 'Y') continue;
 
             var row = '';
 
-            row += '        <div class="menu-category ">';
-            row += '            <div class="card">';
-            row += '                <div class="card-header">';
-            row += '                    <a href="#"><span style="text-align: center;"';
-            row += '                                                            class="card-title">' + worksheetRow['Title'] + '</span></a>';
-            row += '                </div>';
-            row += '                <div style="background-color: #fff; padding-top: 4px;" class="card-content">';
-            row += '                    <p>' + converter.makeHtml(worksheetRow['Description']) + '</p>';
-       //     row += '                    <p>Team: ' + converter.makeHtml(worksheetRow['Team']) + '</p>';
-       //     row += '                    <p>Needs:' + converter.makeHtml(worksheetRow['Needs']) + '</p>';
-
-            row += '                </div>';
-            row += '';
-            row += '';
-            row += '                <div style="background-color: #fff" class="card-action">';
-
-            row += '<p>';
-
+            row += '<div class="col-md-4 col-xs-6 tabletopDiv">';
+            row += '    <div class="tabletopProject">';
+            row += '        <h2 style="color: #fff;">' + worksheetRow['Title'] + '</h2>';
+            row += '        <p></p>';
+            
+        
             if ( worksheetRow['Site']) {
                 row += '<a href="' + worksheetRow['Site']+ '" target="_blank">Visit Web Site</a>';
             }
@@ -77,20 +65,13 @@ Tabletop.init({                                             // Requires js/table
                 row += '&nbsp;&nbsp;&nbsp;&nbsp; Languages: ' + worksheetRow['Languages'];
             }
 
-            row += '</p>';
-
-            row += '                    &nbsp;';
-            row += '                </div>';
-            row += '            </div>';
-            row += '        </div>';
+            row += '    </div>';
+            row += '</div>';
 
             console.dir('Data: %o; HTML: %o', worksheetRow, row);
 
             $('#projects').append(row);
 
-
         }
     }
 });
-
-
