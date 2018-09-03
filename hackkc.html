@@ -1,25 +1,25 @@
 ---
 layout: ndoch
-title: HACK KANSAS CITY - 2017
+title: HACK KANSAS CITY - 2018
 excerpt: Hack, Learn, Make Something Good #HACKKC
 is_nocd_2015: true
 custom_css:
-- hackkc2017
+- hackkc2018
 custom_js:
 - tabletop
-- hackkc-2017-projects
 - showdown
-- ndoch-2017
+- ndoch-2018
 ---
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDQNzkJUiUJBqI_pex-Xe9_1JD4sf2KZS8&sensor=false&extension=.js'></script>
 
 <script>
     google.maps.event.addDomListener(window, 'load', init);
     var map;
+
     function init() {
         var mapOptions = {
             center: new google.maps.LatLng(39.0929229, -94.5860675),
-            zoom: 15,
+            zoom: 17,
             zoomControl: true,
             zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.DEFAULT,
@@ -43,7 +43,7 @@ custom_js:
         var mapElement = document.getElementById('umkc-map');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-            ['Think Big Partners', 'Think Big Partners', 'undefined', 'undefined', 'undefined', 39.0929229, -94.5860675, 'https://mapbuildr.com/assets/img/markers/default.png']
+            ['Plexpod Crossroads', 'Think Big Partners', 'undefined', 'undefined', 'undefined', 39.0929115, -94.5860336, 'https://mapbuildr.com/assets/img/markers/default.png']
         ];
         for (i = 0; i < locations.length; i++) {
             if (locations[i][1] == 'undefined') {
@@ -71,7 +71,7 @@ custom_js:
             } else {
                 markericon = locations[i][7];
             }
-            marker = new google.maps.Marker({
+            var marker = new google.maps.Marker({
                 icon: markericon,
                 position: new google.maps.LatLng(locations[i][5], locations[i][6]),
                 map: map,
@@ -96,46 +96,60 @@ custom_js:
     <div class="container">
         <img class="responsive-img" src="../images/civic_hacking_logo_two.png" width="600"/>
         <p class="hero-event-date">
-            <span>September 23-24, 2017</span>
-            <a href="#">#hackKC</a>
-            <a href="#">@codeforkc</a>
+            <span>August 11, 2018<br>Discovery & Design Workshop for Hack KC</span>
+            <!-- <a href="#">#hackKC</a>
+            <a href="#">@codeforkc</a> -->
         </p>
-        <p>
-            <a href="https://www.eventbrite.com/e/hackkc-2017-tickets-36875066316"
-               class="btn btn-success btn-lg active registration-btn" role="button" aria-pressed="true">Register
-                Today!</a>
-            </b>
+
+        <div class="button-center">
+            <a href="https://www.eventbrite.com/e/discovery-design-workshop-for-hack-kc-tickets-47030752246"
+               class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register for the Discovery & Design Workshop</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqvOEjX_cfVS77n1ZK34DOCi5PJbdMJVT4kYiDjTPvqcSPWw/viewform?c=0&w=1&includes_info_params=true"
+               class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Submit a Project</a>
+        </div>
     </div>
-    <div class="hero-event-overview" style="background: #000;">
-        <p class="container">Join local designers, developers, doers and thinkers with a passion for making local
-            government work better through technology.</p>
-    </div>
+
 </div>
-<div class="content-panel">
+<div id="learnDiv" class="content-panel">
+    <q>Join Code for KC to develop tech for good! </q>
+
+    <div class="container">
+
+        <p>Do you have a community-oriented idea that might benefit from a tech solution? Do you like to lend your
+            skills to help people bring their ideas to life? Then this Discovery and Design Workshop (on the National
+            Day of Civic Hacking) is for you—yes, you! Anyone can participate, and you don’t have to be an expert in
+            technology.</p>
+        <p>This FREE event brings together people with the passion for doing good to collaborate in developing
+            technology solutions that help others. Nonprofit professionals, urbanists, civic hackers, government staff,
+            developers, designers, project managers, community organizers and more are welcomed!</p>
+        <ul>
+            <li>9:00-9:30 | Welcome and Overview
+
+            <li>9:30-11:30 | Ideation, Asset, and Project Brainstorming
+
+            <li>11:30-12:30 | Lunch
+
+            <li>12:30-2:30 | Project Refinement and Solution Work
+
+            <li>2:30-5:00 | Next Steps (and Start Hacking)
+        </ul>
+
+
+        <p>Project ideas developed at the event will go through additional development and preparation to participate in
+            HackKC on October 13-14. <a href="https://www.eventbrite.com/e/hack-kc-2018-tickets-47997788678">Register
+                here for Hack KC</a></p>
+    </div>
     <q>
         Change only happens when ordinary people get involved!
     </q>
-    <div class="container">
-        <p>Join Code For KC for an exciting two day hackathon where we design and create solutions that solve community
-            problems. Do you love designing and coding? How does working on open source while solving practical problems
-            sound to you? Then join us for this exciting two day event!</p>
-        <p>The fun doesn't stop there either! Projects continue well after the hackathon until they are complete. Some
-            apps from previous years have stayed on board for years!</p>
-    </div>
-
-    <div class="button-center">
-        <a href="https://www.eventbrite.com/e/hackkc-2017-tickets-36875066316" class="btn btn-success btn-lg active"
-           role="button" aria-pressed="true">Register Today!</a>
-    </div>
 </div>
 <div class="content-panel projects">
-    <h3 class="content-panel-header">What is Code For KC?</h3>
+    <h3 class="content-panel-header">What is the Kansas City Code Brigade?</h3><br>
     <div class="container">
+        <img id="codeForKCLogo" class="logos" src="{{site.baseurl}}/images/codeforkclogo.jpg" width="450">
+        <br>
         <p>
-            Code For KC is a non profit group who utilizes modern technology to solve civic problems. We want to address real problems in our community, such as environmental issues, transportation problems, and many more using open source coding networks.
-        </p>
-        </p>
-            Our projects are created around the idea that there are real issues in our community that can have a technological solution. Through collaboration and networking we create a community-based solution and follow through with a team of coders, designers, writers (and more!) to implement that solution.
+            Code for KC is a program of KC Digital Drive, and an affiliate of the national Code for America Brigade network. We work on civic tech projects throughout the year at our weekly Monday night hack nights. Hack KC is an annual hackathon that serves as a kickoff event for many of our projects. Unlike a typical weekend hackathon, our program is less about what can be built in a weekend or who can build the best or fastest, and more about what we can build to benefit the community.
         </p>
     </div>
 </div>
@@ -143,12 +157,11 @@ custom_js:
     <div class="container event-info-container">
         <div class="event-details">
             <h3>Dates</h3>
-            <p>September 23, 2017<br/>9:00 AM - 4:30 PM
+            <p>August 11, 2018<br/>9:00 AM - 4:30 PM
             <p>
-            <p>September 24, 2017<br/>9:00 AM - 4:30 PM</p>
             <h3>Location</h3>
             <address>
-                Think Big Partners<br/>
+                Plexpod Crossroads<br/>
                 1712 Main St.<br/>
                 Kansas City, MO 64108
             </address>
@@ -156,96 +169,8 @@ custom_js:
         <div id='umkc-map'></div>
     </div>
 </div>
-
-<div class="content-panel schedule-of-events">
-    <h3 class="content-panel-header">Schedule of Events</h3>
-    <div class="container">
-        <div class="projects-container">
-            <div class="collapsible-panel">
-                <h3 class="header">
-                    Pre Hack KC - Planning
-                    <span class="toggler">&#9660;</span>
-                </h3>
-                <div class="collapsible-panel-inner">
-                    <div class="collapsible-panel-content">
-                        <h5>Monday Nights Leading up to Hack KC:</h5>
-                        <p>There are four hack night workshop sessions designed to make projects be successful. We encourage individuals planning to participate in Hack KC to join us for as many workshop sessions as possible.
-                        </p>
-                        <ul>
-                            <li>Aug 21st: <a href="https://www.eventbrite.com/e/hacking-tools-101-w-code-for-kc-tickets-37020864402">Hacking Tools 101 - Register</a></li>
-                            <li>Aug 28th: <a href="https://www.eventbrite.com/e/project-canvas-and-value-proposition-w-code-for-kc-tickets-37031165212">Project Canvas and Value Proposition - Register</a></li>
-                            <li>Sep: 4th: NO MEETING Labor Day
-                            <li>Sep 11th: <a href="https://www.eventbrite.com/e/pitching-and-team-building-w-code-for-kc-tickets-37031392893">Pitching and Team Building - Register</a></li>
-                            <li>Sep 18th: <a href="https://www.eventbrite.com/e/meet-and-greet-for-hack-kc-tickets-37033262485">Meet and Greet - Register</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="collapsible-panel">
-                <h3 class="header">
-                    Hack KC - Start Building
-                    <span class="toggler">&#9660;</span>
-                </h3>
-                <div class="collapsible-panel-inner">
-                    <div class="collapsible-panel-content">
-                        <h5>The Event</h5>
-                        <p>Join Code for KC for an exciting two day hackathon where we write apps that solve community problems.</p>
-    			<p>We will also have a few 1 hour classes to teach crash courses in things like design and GIS - stay tuned for more information on those! </p>
-
-                        <h5>Saturday September 23rd</h5>
-
-    			<ul>
-    				<li>9:00 am Registration and Breakfast</li>
-    				<li>9:30 am Introductions</li>
-    				<li>10:00 am Project Pitches</li>
-    				<li>11:30 am Lunch and hacking</li>
-    				<li>4:30 pm Fin</li>
-    			</ul>
-
-
-                        <h5>Sunday September 24th</h5>
-    			<ul>
-    				<li> 9:00 am Doors open for Hacking</li>
-    				<li>11:30 am Lunch</li>
-    				<li>3:00 pm Project Report Back</li>
-    				<li>4:30 pm Fin</li>
-    			</ul>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="collapsible-panel">
-                <h3 class="header">
-                    Post Hack KC - Finish
-                    <span class="toggler">&#9660;</span>
-                </h3>
-                <div class="collapsible-panel-inner">
-                    <div class="collapsible-panel-content">
-                        <h5>Monday Nights</h5>
-    			<p>Hack KC is more than a weekend hack event.
-                    Projects continue until they are complete at Monday night HackNights.</p>
-
-                        <p>Throughout the year, we are on the lookout throughout across our KC Digital Drive community partners looking for compelling project
-                    opportunities, and Code for KC is the primary avenue for bringing civic tech projects with a software development angle to life.</p>
-
-                        <p>We look for projects that may take 60-80 hours of time over the course of 6-12 months and deliver meaningful impact in the community, largely through our weekly hack nights.
-                    But these projects take all sorts of shapes, from Made in KC and localstart.org, which launched at our first event in 2013, to Community KC, to I Got Mine.</p>
-
-                    <p>Check out current projects in development or submit your own below.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
 <div class="content-panel attendee-profiles">
-    <h3 class="content-panel-header">How can I help? <br/><small>Click icon for details!</small></h3>
+    <h3 class="content-panel-header">How can I help?</h3>
     <div class="attendee-profiles-container">
         <figure>
             <img class="interactive-tooltip"
@@ -302,33 +227,54 @@ custom_js:
             <a class="logos" href="http://thinkbigcoworking.com/" target="_blank">
                 <img src="{{ site.baseurl }}/images/ThinkBigCoworking.png" width="200"/>
             </a>
-            <a class="logos" href="http:/app.mysidewalk.com/" target="_blank">
-                <img src="{{ site.baseurl }}/images/MySidewalk_Logo-RGB.png" width="200"/>
+            <a class="logos" href="https://fiber.google.com" target="_blank">
+                <img src="{{ site.baseurl }}/images/google-fiber.png" width="200"/>
             </a>
-
-            <a class="logos" href="http:/kcmo.org/" target="_blank">
-                <img src="{{ site.baseurl }}/images/KCMOlogo.png" width="200"/>
+            <a class="logos" href="http://www.polsinelli.com/" target="_blank">
+                <img src="{{ site.baseurl }}/images/Polsinelli_Color_logo.jpg" width="200"/>
             </a>
-
-            <span></span>
-        </div>
-    </div>
-</div>
-<div class="content-panel sponsors">
-    <div class="container">
-        <h3 class="content-panel-header">Organizers</h3>
-        <div class="sponsors-container">
             <a class="logos" href="http://www.kcdigitaldrive.org/" target="_blank">
                 <img src="{{ site.baseurl }}/images/kcdd-logo.png" width="200"/>
             </a>
             <a class="logos" href="http://codeforkc.org/" target="_blank">
                 <img src="{{ site.baseurl }}/images/CodeForKC_Logo-01.png" width="200"/>
             </a>
+            <a class="logos" href="https://www.cerner.com/" target="_blank">
+                <img src="{{ site.baseurl }}/images/Cerner-Corporation-logo.png" width="200" />
+            </a>
+            <a class="logos" href="https://www.plexpod.com/" target="_blank">
+                <img src="{{ site.baseurl }}/images/plexpod_logo.png" width="200" />
+            </a>
             <span></span>
         </div>
     </div>
 </div>
 
+<div class="content-panel supporters">
+    <div class="container">
+        <h3 class="content-panel-header">Supporters</h3>
+        <div class="sponsors-container">
+            <a class="logos" href="http://law.umkc.edu/" target="_blank">
+                <img src="{{ site.baseurl }}/images/umkc-law-stack_web_400px.jpg" width="200" />
+            </a>
+            <a class="logos" href="http://www.kcmolandbank.org/" target="_blank">
+                <img src="{{ site.baseurl }}/images/land_bank_logo.png" width="200" />
+            </a>
+            <a class="logos" href="http://www.lisc.org/kansas-city/" target="_blank">
+                <img src="{{ site.baseurl }}/images/LISC_logo.png" width="200" />
+            </a>
+            <a class="logos" href="https://www.alt-cap.org/ccfindex/" target="_blank">
+                <img src="{{ site.baseurl }}/images/CCF_logo.jpg" width="200" />
+            </a>
+        </div>
+    </div>
+</div>
 
 
+<script type="text/javascript">
+    $('#learnMoreLink').click(function () {
+        $('#learnDiv').toggle();
+    });
+
+</script>
 
